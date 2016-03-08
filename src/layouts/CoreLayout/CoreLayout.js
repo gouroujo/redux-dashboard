@@ -1,4 +1,7 @@
 import React, { PropTypes } from 'react'
+import ToolboxApp from 'react-toolbox/lib/app'
+import Header from 'components/Header/Header'
+
 import '../../styles/core.scss'
 
 // Note: Stateless/function components *will not* hot reload!
@@ -12,11 +15,10 @@ import '../../styles/core.scss'
 // define it with a plain javascript function...
 function CoreLayout ({ children }) {
   return (
-    <div className='page-container'>
-      <div className='view-container'>
-        {children}
-      </div>
-    </div>
+    <ToolboxApp>
+      <Header />
+      {children}
+    </ToolboxApp>
   )
 }
 
