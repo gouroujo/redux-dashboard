@@ -1,0 +1,16 @@
+@import "~react-toolbox/lib/base";
+@import "~react-toolbox/lib/app_bar/config";
+@import "~react-toolbox/lib/button/config";
+
+.playground-button {
+  position: fixed;
+  top: $appbar-height - ($button-floating-mini-height / 2);
+  right: $button-floating-mini-height / 2;
+  z-index: $z-index-higher;
+  background-color: $color-accent;
+  border-radius: 50%;
+
+   button {
+    color: $color-background !important;
+  }
+}

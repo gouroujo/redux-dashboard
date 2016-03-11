@@ -31,7 +31,7 @@ export class GridWrapper extends React.Component {
 
     return (
       <Card {...this.props}>
-          {children}
+        {children}
       </Card>
     )
   }

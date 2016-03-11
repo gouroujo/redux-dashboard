@@ -8,11 +8,11 @@ export const ADD_WIDGET = 'ADD_WIDGET'
 // Actions
 // ------------------------------------
 let nextWidgetId = 0
-export function addWidget () {
+export function addWidget (type) {
   return {
     type: ADD_WIDGET,
     widgetId: nextWidgetId++,
-    text: 'yo'
+    text: type
   }
 }
 

@@ -1,31 +1,20 @@
 import React, { PropTypes } from 'react'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 
-import { actions } from 'redux/modules/widgets'
+import AddWidgetMenu from 'components/AddWidgetMenu/AddWidgetMenu'
 
-import { Button } from 'react-toolbox'
 import Dashboard from 'containers/Dashboard'
-import style from './style'
 
 const propTypes = {
-  widgets: PropTypes.array.isRequired,
-  actions: PropTypes.object.isRequired
+  widgets: PropTypes.array.isRequired
 }
 
 export class DashboardView extends React.Component {
   render () {
-    const { widgets, actions } = this.props
+    const { widgets } = this.props
     return (
       <section>
-        <Button
-          icon='add'
-          mini
-          accent
-          floating
-          className={style['playground-button']}
-          onClick={actions.addWidget}
-        />
+        <AddWidgetMenu />
         <Dashboard widgets={widgets}/>
       </section>
     )
@@ -36,7 +25,5 @@ DashboardView.propTypes = propTypes
 const mapStateToProps = (state) => ({
   widgets: state.widgets
 })
-const mapDispatchToProps = (dispatch) => ({
-  actions: bindActionCreators(actions, dispatch)
-})
-export default connect(mapStateToProps, mapDispatchToProps)(DashboardView)
+
+export default connect(mapStateToProps)(DashboardView)
