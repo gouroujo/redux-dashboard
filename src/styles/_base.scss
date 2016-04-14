@@ -10,3 +10,10 @@ For example:
 @import './variables/components';
 @import './themes/default';
 */
+
+$import-flex-attributes: true;
+@import "~react-toolbox/lib/base";
+@import "~react-toolbox/lib/app_bar/config";
+@import "~react-toolbox/lib/button/config";
+
+$unit: 0.5rem;

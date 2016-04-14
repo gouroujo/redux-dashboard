@@ -19,7 +19,7 @@ export class AddWidgetMenu extends React.Component {
     const addLineChartWidget = () => { this.props.actions.addWidget('line') }
 
     return (
-      <IconMenu icon='add' mini accent floating menuRipple className={style['playground-button']}>
+      <IconMenu icon='add' mini accent floating menuRipple className={style['add-button']}>
         <MenuItem value='download' icon='insert_chart' caption='Bar Chart'
           onClick={addBarChartWidget} />
         <MenuItem value='help' icon='pie_chart' caption='Pie Chart'
